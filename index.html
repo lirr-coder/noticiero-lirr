@@ -8,7 +8,6 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'IBM Plex Sans',sans-serif; background:#f5f5f4; color:#1a1a1a; padding:28px 24px; font-size:17px; max-width:1100px; margin:0 auto; }
-
 .header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; gap:12px; }
 .header-left h1 { font-size:20px; font-weight:600; letter-spacing:-.2px; }
 .header-meta { font-family:'IBM Plex Mono',monospace; font-size:11px; color:#999; margin-top:3px; }
@@ -19,7 +18,6 @@ body { font-family:'IBM Plex Sans',sans-serif; background:#f5f5f4; color:#1a1a1a
 .refresh-btn:hover { opacity:.8; }
 .refresh-btn:disabled { opacity:.35; cursor:not-allowed; }
 .last-gen { font-family:'IBM Plex Mono',monospace; font-size:10px; color:#bbb; }
-
 .apikey-bar { background:#fff; border:1px solid #e8e8e8; border-radius:8px; padding:14px 18px; margin-bottom:8px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .apikey-bar label { font-family:'IBM Plex Mono',monospace; font-size:10px; color:#999; text-transform:uppercase; letter-spacing:.4px; white-space:nowrap; }
 .apikey-bar input { flex:1; min-width:240px; padding:7px 10px; border:1px solid #e0e0e0; border-radius:5px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a1a1a; outline:none; background:#fafafa; transition:border-color .15s; }
@@ -27,18 +25,14 @@ body { font-family:'IBM Plex Sans',sans-serif; background:#f5f5f4; color:#1a1a1a
 .apikey-bar .save-btn { padding:7px 14px; background:#1a1a1a; border:none; border-radius:5px; font-family:'IBM Plex Sans',sans-serif; font-size:12px; color:#fff; cursor:pointer; transition:opacity .15s; white-space:nowrap; }
 .apikey-bar .save-btn:hover { opacity:.75; }
 .apikey-note { font-family:'IBM Plex Mono',monospace; font-size:10px; margin-bottom:14px; padding:0 4px; }
-
 .loader-wrap { margin-bottom:18px; }
 .loader-bar { width:100%; height:2px; background:#e8e8e8; border-radius:1px; overflow:hidden; margin-bottom:6px; }
 .loader-fill { height:100%; background:#1a1a1a; animation:ld 1.4s ease-in-out infinite; }
 @keyframes ld{0%{width:0%;margin-left:0}50%{width:45%;margin-left:27%}100%{width:0%;margin-left:100%}}
 .loader-txt { font-family:'IBM Plex Mono',monospace; font-size:11px; color:#aaa; }
-
 .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
 .grid-1 { display:grid; grid-template-columns:1fr; gap:14px; margin-bottom:14px; }
 @media(max-width:720px){ .grid-2 { grid-template-columns:1fr; } }
-
-/* CARD ACORDEON */
 .card { background:#fff; border:1px solid #e8e8e8; border-radius:10px; overflow:hidden; }
 .card-header { padding:18px 22px; cursor:pointer; display:flex; align-items:flex-start; justify-content:space-between; gap:14px; user-select:none; transition:background .12s; }
 .card-header:hover { background:#fafafa; }
@@ -49,12 +43,9 @@ body { font-family:'IBM Plex Sans',sans-serif; background:#f5f5f4; color:#1a1a1a
 .card-preview { font-size:13px; color:#aaa; line-height:1.4; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .card-chevron { font-size:20px; color:#ccc; flex-shrink:0; margin-top:2px; transition:transform .22s ease; line-height:1; }
 .card-chevron.open { transform:rotate(180deg); color:#888; }
-
 .card-body-wrap { max-height:0; overflow:hidden; transition:max-height .38s ease; }
 .card-body-wrap.open { max-height:3000px; }
 .card-body { padding:0 22px 24px; border-top:1px solid #f0f0f0; padding-top:20px; }
-
-/* TIPOGRAFIA DEL CONTENIDO */
 .card-body p { font-size:17px; line-height:1.9; color:#2d2d2d; margin-bottom:13px; }
 .card-body p:last-child { margin-bottom:0; }
 .card-body h4 { font-size:14px; font-weight:600; color:#1a1a1a; margin:20px 0 8px; padding-left:12px; border-left:3px solid #1a1a1a; }
@@ -64,20 +55,16 @@ body { font-family:'IBM Plex Sans',sans-serif; background:#f5f5f4; color:#1a1a1a
 .card-body ul li { font-size:17px; line-height:1.85; color:#2d2d2d; padding:9px 0 9px 18px; border-bottom:1px solid #f5f5f4; position:relative; }
 .card-body ul li:last-child { border-bottom:none; }
 .card-body ul li::before { content:'—'; position:absolute; left:0; color:#ccc; }
-
-/* SKELETON */
 .sk-card { background:#fff; border:1px solid #e8e8e8; border-radius:10px; padding:20px 22px; }
 .sk { background:#f0f0f0; border-radius:3px; height:13px; margin-bottom:10px; animation:pulse 1.3s ease-in-out infinite; }
 .sk.t { height:18px; margin-bottom:8px; }
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
-
 .section-title { font-family:'IBM Plex Mono',monospace; font-size:10px; color:#ccc; text-transform:uppercase; letter-spacing:.6px; margin:24px 0 12px; padding-bottom:8px; border-bottom:1px solid #ebebeb; }
 .error-box { padding:16px 18px; background:#fff8f8; border:1px solid #fecaca; border-radius:8px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#e53e3e; line-height:1.8; }
 .footer { font-family:'IBM Plex Mono',monospace; font-size:10px; color:#ccc; text-align:right; margin-top:24px; padding-top:16px; border-top:1px solid #ebebeb; }
 </style>
 </head>
 <body>
-
 <div class="header">
   <div class="header-left">
     <h1>Briefing Diario</h1>
@@ -88,214 +75,128 @@ body { font-family:'IBM Plex Sans',sans-serif; background:#f5f5f4; color:#1a1a1a
     <button class="refresh-btn" id="rbtn" onclick="loadBriefing()">↻ Generar briefing</button>
   </div>
 </div>
-
 <div class="apikey-bar">
   <label>OpenAI API Key</label>
   <input type="password" id="apikey-input" placeholder="sk-proj-..." autocomplete="off" />
   <button class="save-btn" onclick="saveKey()">Guardar key</button>
 </div>
 <div class="apikey-note" id="apikey-note" style="display:none"></div>
-
 <div id="loader-wrap" style="display:none" class="loader-wrap">
   <div class="loader-bar"><div class="loader-fill"></div></div>
   <div class="loader-txt" id="loader-msg">Buscando noticias del dia...</div>
 </div>
-
 <div id="content"></div>
 <div class="footer" id="footer"></div>
-
 <script>
-const STORAGE_KEY = 'luis_briefing_openai_v4';
-const KEY_STORE = 'luis_openai_key';
-const SECS = [
-  {id:'mkt',   label:'Marketing & Meta Ads',       tag:'ads'},
-  {id:'ai',    label:'AI & Automatizacion',         tag:'tools'},
-  {id:'tech',  label:'Tecnologia General',          tag:'tech'},
-  {id:'mercados',label:'Mercados & Cripto',          tag:'mercados'},
-  {id:'latam', label:'Latam & Venezuela',           tag:'region'},
-  {id:'biz',   label:'Emprendimiento & Estrategia', tag:'negocios'},
-  {id:'hist',  label:'Leccion Historica',           tag:'historia'},
+const STORAGE_KEY='luis_briefing_openai_v4';
+const KEY_STORE='luis_openai_key';
+const SECS=[
+  {id:'mkt',label:'Marketing & Meta Ads',tag:'ads'},
+  {id:'ai',label:'AI & Automatizacion',tag:'tools'},
+  {id:'tech',label:'Tecnologia General',tag:'tech'},
+  {id:'mercados',label:'Mercados & Cripto',tag:'mercados'},
+  {id:'latam',label:'Latam & Venezuela',tag:'region'},
+  {id:'biz',label:'Emprendimiento & Estrategia',tag:'negocios'},
+  {id:'hist',label:'Leccion Historica',tag:'historia'},
 ];
-
-function getKey(){
-  return (localStorage.getItem(KEY_STORE)||'').replace(/[^\x20-\x7E]/g,'').trim();
-}
+function getKey(){return(localStorage.getItem(KEY_STORE)||'').replace(/[^\x20-\x7E]/g,'').trim();}
 function saveKey(){
-  const raw = document.getElementById('apikey-input').value.replace(/[^\x20-\x7E]/g,'').trim();
-  const val = raw.startsWith('sk-') ? raw : getKey();
-  if(!val.startsWith('sk-')){ showNote('La key debe comenzar con sk-...', true); return; }
-  localStorage.setItem(KEY_STORE, val);
-  document.getElementById('apikey-input').value = val.slice(0,8)+'•'.repeat(20)+val.slice(-4);
-  showNote('Key guardada. Ya puedes generar tu briefing.', false);
+  const raw=document.getElementById('apikey-input').value.replace(/[^\x20-\x7E]/g,'').trim();
+  const val=raw.startsWith('sk-')?raw:getKey();
+  if(!val.startsWith('sk-')){showNote('La key debe comenzar con sk-...',true);return;}
+  localStorage.setItem(KEY_STORE,val);
+  document.getElementById('apikey-input').value=val.slice(0,8)+'•'.repeat(20)+val.slice(-4);
+  showNote('Key guardada. Ya puedes generar tu briefing.',false);
 }
 function showNote(msg,isErr){
   const el=document.getElementById('apikey-note');
-  el.textContent=msg; el.style.color=isErr?'#e53e3e':'#16a34a'; el.style.display='block';
+  el.textContent=msg;el.style.color=isErr?'#e53e3e':'#16a34a';el.style.display='block';
 }
-
-// Extrae primer parrafo visible del HTML para el preview
 function extractPreview(html){
-  const tmp=document.createElement('div');
-  tmp.innerHTML=html;
-  const p=tmp.querySelector('p,li');
-  return p ? p.textContent.trim().slice(0,120)+'...' : '';
+  const tmp=document.createElement('div');tmp.innerHTML=html;
+  const p=tmp.querySelector('p,li');return p?p.textContent.trim().slice(0,120)+'...':'';
 }
-
-// Extrae un titulo h4 si existe, sino genera uno generico
-function extractTitle(html, fallback){
-  const tmp=document.createElement('div');
-  tmp.innerHTML=html;
-  const h=tmp.querySelector('h4');
-  return h ? h.textContent.trim() : fallback;
+function extractTitle(html,fallback){
+  const tmp=document.createElement('div');tmp.innerHTML=html;
+  const h=tmp.querySelector('h4');return h?h.textContent.trim():fallback;
 }
-
 function toggle(id){
   const body=document.getElementById('body-'+id);
   const chev=document.getElementById('chev-'+id);
   const isOpen=body.classList.contains('open');
-  body.classList.toggle('open',!isOpen);
-  chev.classList.toggle('open',!isOpen);
+  body.classList.toggle('open',!isOpen);chev.classList.toggle('open',!isOpen);
 }
-
-function skCard(){ 
-  return `<div class="sk-card"><div class="sk t" style="width:40%"></div><div class="sk t" style="width:75%"></div><div class="sk" style="width:90%;margin-top:12px"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:65%"></div></div>`;
+function skCard(){return`<div class="sk-card"><div class="sk t" style="width:40%"></div><div class="sk t" style="width:75%"></div><div class="sk" style="width:90%;margin-top:12px"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:65%"></div></div>`;}
+function buildCard(sec,html){
+  const preview=extractPreview(html);
+  const titulo=extractTitle(html,sec.label);
+  return`<div class="card"><div class="card-header" onclick="toggle('${sec.id}')"><div class="card-header-left"><div class="card-meta">${sec.label}<span class="tag">${sec.tag}</span></div><div class="card-titulo">${titulo}</div><div class="card-preview">${preview}</div></div><div class="card-chevron" id="chev-${sec.id}">&#8964;</div></div><div class="card-body-wrap" id="body-${sec.id}"><div class="card-body">${html}</div></div></div>`;
 }
-
-function buildCard(sec, html){
-  const preview = extractPreview(html);
-  const titulo = extractTitle(html, sec.label);
-  return `<div class="card">
-    <div class="card-header" onclick="toggle('${sec.id}')">
-      <div class="card-header-left">
-        <div class="card-meta">${sec.label}<span class="tag">${sec.tag}</span></div>
-        <div class="card-titulo">${titulo}</div>
-        <div class="card-preview" id="prev-${sec.id}">${preview}</div>
-      </div>
-      <div class="card-chevron" id="chev-${sec.id}">&#8964;</div>
-    </div>
-    <div class="card-body-wrap" id="body-${sec.id}">
-      <div class="card-body">${html}</div>
-    </div>
-  </div>`;
-}
-
 function renderContent(data){
-  const c = sec => buildCard(sec, data[sec.id]||'<p>Sin datos.</p>');
-  document.getElementById('content').innerHTML = `
-    <div class="section-title">Noticias del dia</div>
-    <div class="grid-2">${c(SECS[0])}${c(SECS[1])}</div>
-    <div class="grid-2">${c(SECS[2])}${c(SECS[3])}</div>
-    <div class="section-title">Regional & Negocios</div>
-    <div class="grid-2">${c(SECS[4])}${c(SECS[5])}</div>
-    <div class="section-title">Profundidad</div>
-    <div class="grid-1">${c(SECS[6])}</div>`;
-  // Abrir el primero por defecto
+  const c=sec=>buildCard(sec,data[sec.id]||'<p>Sin datos.</p>');
+  document.getElementById('content').innerHTML=`<div class="section-title">Noticias del dia</div><div class="grid-2">${c(SECS[0])}${c(SECS[1])}</div><div class="grid-2">${c(SECS[2])}${c(SECS[3])}</div><div class="section-title">Regional & Negocios</div><div class="grid-2">${c(SECS[4])}${c(SECS[5])}</div><div class="section-title">Profundidad</div><div class="grid-1">${c(SECS[6])}</div>`;
   toggle(SECS[0].id);
 }
-
 function showSkeletons(){
   const sk2=`<div class="grid-2">${skCard()}${skCard()}</div>`;
   const sk1=`<div class="grid-1">${skCard()}</div>`;
-  document.getElementById('content').innerHTML=`
-    <div class="section-title">Noticias del dia</div>${sk2}${sk2}
-    <div class="section-title">Regional & Negocios</div>${sk2}
-    <div class="section-title">Profundidad</div>${sk1}`;
+  document.getElementById('content').innerHTML=`<div class="section-title">Noticias del dia</div>${sk2}${sk2}<div class="section-title">Regional & Negocios</div>${sk2}<div class="section-title">Profundidad</div>${sk1}`;
 }
-
 function setLastGen(ts){
   const d=new Date(ts);
   document.getElementById('last-gen').textContent='Ultimo: '+d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'})+' '+d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});
   document.getElementById('footer').textContent='Generado el '+d.toLocaleString('es-ES')+' · Solo se actualiza cuando presionas el boton';
 }
-
 window.addEventListener('DOMContentLoaded',()=>{
   const k=getKey();
-  if(k){
-    document.getElementById('apikey-input').value=k.slice(0,8)+'•'.repeat(20)+k.slice(-4);
-    showNote('Key cargada. Listo para generar.', false);
-  }
-  try{
-    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if(saved&&saved.data&&saved.ts){ renderContent(saved.data); setLastGen(saved.ts); }
-  }catch(e){}
+  if(k){document.getElementById('apikey-input').value=k.slice(0,8)+'•'.repeat(20)+k.slice(-4);showNote('Key cargada. Listo para generar.',false);}
+  try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved&&saved.data&&saved.ts){renderContent(saved.data);setLastGen(saved.ts);}}catch(e){}
 });
-
 async function loadBriefing(){
   const apiKey=getKey();
-  if(!apiKey){ showNote('Primero guarda tu OpenAI API key.', true); document.getElementById('apikey-input').focus(); return; }
-
+  if(!apiKey){showNote('Primero guarda tu OpenAI API key.',true);document.getElementById('apikey-input').focus();return;}
   const btn=document.getElementById('rbtn');
-  btn.disabled=true; btn.textContent='⏳ Generando...';
+  btn.disabled=true;btn.textContent='⏳ Generando...';
   document.getElementById('status').textContent='Buscando noticias...';
   document.getElementById('loader-wrap').style.display='block';
   showSkeletons();
-
-  const steps=['Buscando noticias con web search...','Revisando IA y automatizacion...','Consultando cripto y finanzas...','Noticias de Latam y Venezuela...','Redactando briefing completo...'];
+  const steps=['Buscando noticias con web search...','Revisando IA y automatizacion...','Consultando mercados...','Noticias de Latam y Venezuela...','Redactando briefing completo...'];
   let si=0;
-  const iv=setInterval(()=>{ document.getElementById('loader-msg').textContent=steps[si++%steps.length]; },5000);
-
+  const iv=setInterval(()=>{document.getElementById('loader-msg').textContent=steps[si++%steps.length];},5000);
   const today=new Date().toLocaleDateString('es-ES',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-
   try{
-    // PASO 1: web search
     document.getElementById('loader-msg').textContent='Buscando noticias reales del dia...';
-    const sr=await fetch('https://api.openai.com/v1/responses',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},
-      body:JSON.stringify({model:'gpt-4o',tools:[{type:'web_search_preview'}],
-        input:`Hoy es ${today}. Busca y resume noticias reales actuales sobre: Meta Ads e Instagram/Facebook, modelos de IA y automatizacion (Make/Zapier/Manychat), tecnologia global, precios BTC/ETH, noticias Latinoamerica y Venezuela. Texto plano, conciso y completo.`})
-    });
-    if(!sr.ok){ const e=await sr.json(); throw new Error(e.error?.message||'Error web search: HTTP '+sr.status); }
+    const sr=await fetch('https://openai-proxy.lirr.workers.dev/v1/responses',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},body:JSON.stringify({model:'gpt-4o',tools:[{type:'web_search_preview'}],input:`Hoy es ${today}. Busca y resume noticias reales actuales sobre: Meta Ads e Instagram/Facebook, modelos de IA y automatizacion (Make/Zapier/Manychat), tecnologia global, S&P500/Nasdaq/Dow Jones con precios, BTC/ETH precios, noticias Latinoamerica y Venezuela. Texto plano, conciso y completo.`})});
+    if(!sr.ok){const e=await sr.json();throw new Error(e.error?.message||'Error web search: HTTP '+sr.status);}
     const sj=await sr.json();
     let newsCtx='';
-    for(const item of (sj.output||[])){
-      if(item.type==='message') for(const p of (item.content||[])) if(p.text) newsCtx+=p.text;
-    }
-    if(!newsCtx) newsCtx='Sin noticias disponibles. Usa tu conocimiento actualizado.';
-
-    // PASO 2: briefing con json_object
+    for(const item of(sj.output||[])){if(item.type==='message')for(const p of(item.content||[]))if(p.text)newsCtx+=p.text;}
+    if(!newsCtx)newsCtx='Sin noticias disponibles. Usa tu conocimiento actualizado.';
     document.getElementById('loader-msg').textContent='Redactando briefing...';
-    const br=await fetch('https://api.openai.com/v1/chat/completions',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},
-      body:JSON.stringify({
-        model:'gpt-4o',
-        response_format:{type:'json_object'},
-        messages:[
-          {role:'system',content:`Eres un generador de briefings. Devuelves SOLO JSON con este schema:
-{"mkt":"html","ai":"html","tech":"html","mercados":"html","latam":"html","biz":"html","hist":"html"}
-HTML permitido: p, strong, h4, ul, li. NUNCA uses comillas dobles dentro del HTML. Sin clases ni atributos. El primer h4 de cada seccion debe ser el TITULO de esa seccion (breve, impactante, max 8 palabras).`},
-          {role:'user',content:`Hoy es ${today}. Noticias reales del dia:\n\n${newsCtx}\n\nBriefing para Luis Rodriguez (venezolano, CEPPE Media, Meta Ads y automatizacion Make/Manychat/IA).\n\nmkt (200-250 palabras): Meta Ads, algoritmo IG/FB, publicidad digital. h4 con titulo. Implicacion practica Latam al final.\nai (200-250 palabras): IA, automatizacion, Make/n8n/Zapier/Manychat. h4 titulo. Relevancia para ventas Instagram/WhatsApp.\ntech (180-220 palabras): 3-4 noticias tech. h4 titulo. Directo.\nmercados (200-250 palabras): Combina dos bloques. Primero bolsa americana: S&P 500, Nasdaq, Dow Jones con variacion % del dia, noticias relevantes de Wall Street. Segundo cripto: BTC/ETH precio actual con variacion %, tendencia y 1-2 noticias. h4 titulo. Solo datos verificados.\nlatam (180-220 palabras): Latam y Venezuela. Dolar si tienes datos. h4 titulo. Directo.\nbiz (250-300 palabras): Insight profundo, accionable, no motivacional. h4 titulo. Aplicable esta semana.\nhist (280-320 palabras): Evento historico como leccion aplicable hoy. h4 titulo impactante. Que marque.`}
-        ]
-      })
-    });
-
+    const br=await fetch('https://openai-proxy.lirr.workers.dev/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},body:JSON.stringify({model:'gpt-4o',response_format:{type:'json_object'},messages:[{role:'system',content:`Eres un generador de briefings. Devuelves SOLO JSON con este schema exacto:\n{"mkt":"html","ai":"html","tech":"html","mercados":"html","latam":"html","biz":"html","hist":"html"}\nHTML permitido: p, strong, h4, ul, li. NUNCA uses comillas dobles dentro del HTML. Sin clases ni atributos. El primer h4 de cada seccion es el TITULO (breve, max 8 palabras).`},{role:'user',content:`Hoy es ${today}. Noticias reales del dia:\n\n${newsCtx}\n\nBriefing para Luis Rodriguez (venezolano, CEPPE Media, Meta Ads y automatizacion Make/Manychat/IA).\n\nmkt (200-250 palabras): Meta Ads, algoritmo IG/FB. h4 titulo. Implicacion practica Latam al final.\nai (200-250 palabras): IA, Make/n8n/Zapier/Manychat. h4 titulo. Relevancia para ventas IG/WhatsApp.\ntech (180-220 palabras): 3-4 noticias tech globales. h4 titulo. Directo.\nmercados (200-250 palabras): Bloque 1: S&P500, Nasdaq, Dow Jones con variacion % del dia y noticias Wall Street. Bloque 2: BTC/ETH precio y variacion %. h4 titulo. Solo datos verificados.\nlatam (180-220 palabras): Latam y Venezuela hoy. Dolar si tienes datos. h4 titulo.\nbiz (250-300 palabras): Insight profundo accionable. h4 titulo. Aplicable esta semana.\nhist (280-320 palabras): Evento historico como leccion aplicable hoy. h4 titulo impactante.`}]})});
     clearInterval(iv);
-    if(!br.ok){ const e=await br.json(); throw new Error(e.error?.message||'Error briefing: HTTP '+br.status); }
+    if(!br.ok){const e=await br.json();throw new Error(e.error?.message||'Error briefing: HTTP '+br.status);}
     const bj=await br.json();
     const raw=bj.choices?.[0]?.message?.content||'';
-    if(!raw) throw new Error('Respuesta vacia.');
+    if(!raw)throw new Error('Respuesta vacia.');
     const data=JSON.parse(raw);
-
     renderContent(data);
     const now=Date.now();
-    try{ localStorage.setItem(STORAGE_KEY,JSON.stringify({ts:now,data})); }catch(e){}
+    try{localStorage.setItem(STORAGE_KEY,JSON.stringify({ts:now,data}));}catch(e){}
     setLastGen(now);
     document.getElementById('status').textContent='Listo · '+new Date().toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});
     document.getElementById('loader-wrap').style.display='none';
-
   }catch(err){
     clearInterval(iv);
     document.getElementById('loader-wrap').style.display='none';
     let hint='';
-    if(err.message.includes('401')) hint='<br>· API key invalida';
-    else if(err.message.includes('429')) hint='<br>· Rate limit — espera unos segundos';
-    else if(err.message.includes('insufficient')) hint='<br>· Sin creditos en tu cuenta OpenAI';
+    if(err.message.includes('401'))hint='<br>· API key invalida';
+    else if(err.message.includes('429'))hint='<br>· Rate limit — espera unos segundos';
+    else if(err.message.includes('insufficient'))hint='<br>· Sin creditos en tu cuenta OpenAI';
     document.getElementById('content').innerHTML=`<div class="error-box"><strong>Error:</strong> ${err.message}${hint}</div>`;
     document.getElementById('status').textContent='Error';
   }
-
-  btn.disabled=false; btn.textContent='↻ Generar briefing';
+  btn.disabled=false;btn.textContent='↻ Generar briefing';
 }
 </script>
 </body>
